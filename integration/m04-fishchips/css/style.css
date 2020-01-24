@@ -1,0 +1,207 @@
+/* style
+font-family: 'Open Sans', sans-serif;
+font-family: 'Slabo 27px', serif;
+
+logo #25B3B4
+fond #87c8c5
+2b9aa0
+
+INSTRUCTIONS
+
+Découverte du inline-block
+HTML
+
+    Utilisation du inline-block pour le placement de certains éléments
+    Utilisation du float pour quelques éléments
+    Utilisation du normalize.css
+
+CSS
+
+    Largeur limité entre 800px et 1100px ok
+    Largeur du bloc gauche : environ 70%
+    Largeur du bloc de droite : environ 30%
+    Utiliser une class pour limiter la largeur du contenu
+
+    Taille de la police :
+        par défaut : 1em OK
+        titre welcome : 2.5em ok
+        titre today : 3.5em ok
+        titre recipe : 1.8em ok
+        titre news : 1.4em ok
+
+    Police utilisés :
+        titre et nav : "Slabo 27px"
+        texte : "Open Sans" ok
+
+BONUS
+
+    Trouver comment on réalise les coins arrondis en CSS pour arrondir les photos
+
+
+*/
+
+/* defaut ***********************************************/
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #87c8c5;
+  padding-top: 50px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #666;
+}
+
+/* titles *******************************************/
+
+h1, h2, h3 {
+  font-family: 'Slabo 27px', serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+section h2 {
+  font-size: 3.5em;
+}
+
+aside h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+/* header */
+
+#header {
+  padding-bottom: 1em;
+  background-color: #25B3B4;
+  border-top: solid 3px #2b9aa0;
+  border-bottom: solid 3px #2b9aa0;
+}
+
+#header a img {
+  width: 200px;
+}
+
+nav a {
+  margin-left: 1em;
+  margin-right: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+/* MAIN */
+
+main {
+  min-width: 800px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/fond.png);
+}
+
+main header {
+  max-width: 70%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SECTION */
+
+section {
+  width: 66%;
+  padding: 2%;
+  background-color: #b6dedc;
+  float: left;
+  text-align: left;
+}
+
+section h2 {
+  text-align: center;
+}
+
+section h2 span {
+  color: #25B3B4;
+}
+
+article {
+   display: inline-block;
+   width: 46%;
+   margin: 2%;
+   vertical-align: top;
+}
+
+article img {
+  border-radius: 50%;
+  float: left;
+  margin: 0px 10px 2px 0px;
+}
+
+article h3 i {
+  font-size: 0.8em;
+  color: #25B3B4;
+}
+
+/* ASIDE */
+
+aside {
+  width: 25%;
+  padding: 1%;
+  float: right;
+  background-color: #25B3B4;
+  border: solid 3px #2b9aa0;
+  text-align: left;
+  color: white;
+}
+
+aside img {
+  float: right;
+  margin-right: -50px;
+  margin-top: -140px;
+}
+
+li {
+  list-style-type: none;
+  list-style : none;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+li span {
+  color: #b6dedc;
+}
+
+/* footer */
+
+footer {
+  max-width: 1100px;
+  padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+footer a {
+  color: #666;
+}
+
+
+/* class **********************************************/
+
+.btn {
+  display: inline-block;
+  float: right;
+  padding: 0.8em;
+  background-color: #2b9aa0;
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,104 @@
+/* style par défaut ******************************/
+
+body {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/fond.png);
+  font-family: Verdana, sans-serif;
+  color: #666;
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+/* textes */
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size : 1.4em;
+  color : #b8cb21;
+  text-transform: uppercase;
+}
+
+small {
+  font-size : 0.8em;
+  line-height: 1.3em;
+}
+
+
+/* header **********************************/
+
+header {
+  background-color: #b8cb21;
+  padding: 2em;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+header a {
+  float: left;
+}
+
+nav {
+  float: right;
+  font-size: 1.3em;
+}
+
+nav a {
+  color: #2c4726;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  margin-top: 2.5em;
+}
+
+
+/* main *************************************/
+
+main {
+  padding: 40px 25px 40px 25px;
+  margin: 0px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+article {
+  clear: both;
+  overflow: hidden;
+  background-color: grey;
+  margin-bottom: 5px;
+}
+
+
+/* footer **********************************************************/
+
+footer {
+  text-align: center;
+  line-height: normal;
+  margin-left: -200px;
+  margin-right: -200px;
+}
+
+footer a {
+  color : grey;
+}
+
+/* class **********************************************************/
+
+.btn {
+  display: inline-block;
+  float: right;
+  padding: 0.5em;
+  background-color: #b8cb21;
+  color: white;
+  text-decoration: none;
+}
+
+.float {
+  width: 30%;
+  float: left;
+  margin: 0px 10px 5px 0;
+}
