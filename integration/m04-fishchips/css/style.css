@@ -43,9 +43,9 @@ BONUS
 /* defaut ***********************************************/
 
 body {
-  margin-left: auto;
-  margin-right: auto;
+  margin : 0;
   background-color: #87c8c5;
+  background-image: url(../img/fond.png);
   padding-top: 50px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -65,16 +65,13 @@ h1 {
   font-size: 2.5em;
 }
 
-section h2 {
-  font-size: 3.5em;
-}
-
-aside h2 {
-  font-size: 1.4em;
-}
-
 h3 {
   font-size: 1.8em;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
 }
 
 /* header */
@@ -104,7 +101,6 @@ main {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(../img/fond.png);
 }
 
 main header {
@@ -126,7 +122,9 @@ section {
 }
 
 section h2 {
+  margin: 30px 0px;
   text-align: center;
+  font-size: 3.5em;
 }
 
 section h2 span {
@@ -154,9 +152,9 @@ article h3 i {
 /* ASIDE */
 
 aside {
-  width: 25%;
-  padding: 1%;
+  width: 24%;
   float: right;
+  padding: 2%;
   background-color: #25B3B4;
   border: solid 3px #2b9aa0;
   text-align: left;
@@ -167,6 +165,10 @@ aside img {
   float: right;
   margin-right: -50px;
   margin-top: -140px;
+}
+
+aside h2 {
+  font-size: 1.4em;
 }
 
 li {
