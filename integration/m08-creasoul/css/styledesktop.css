@@ -1,0 +1,143 @@
+/* STYLE PAR DEFAUT *******************************************************/
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* soit 1 rem = 10px */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: normal;
+  color : #666;
+}
+
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media screen and (max-width : 1023px) {
+  .container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+/* TEXTES PAR DEFAUT */
+
+h1, h2 {
+  border-bottom: solid 1px  #30a894;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  color : #30a894;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+a {
+  text-decoration: none;
+  color : #30a894;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: underline;
+}
+
+span {
+  color: #30a894;
+}
+
+
+
+/* HEADER ***********************************************************/
+
+header {
+  text-align: center;
+}
+
+nav {
+  padding: 2rem;
+  background-color: #30a894;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+nav a {
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: top;
+  padding: 0.5rem;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+@media screen and (max-width : 1023px) {
+  nav a {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* MAIN ***********************************************************/
+
+section {
+  width: 70%;
+  float: left;
+  padding-right: 2rem;
+}
+
+aside {
+  width: 30%;
+  float: right;
+  padding: 2rem;
+  background-color: #b8dcb1;
+}
+
+@media screen and (max-width : 1023px) {
+  section {
+    width: 100%;
+  }
+
+  aside {
+    display: inline-block;
+    width: 100%;
+    float: none;
+  }
+}
+
+@media screen and (max-width : 767px) {
+  aside {
+    display: none;
+  }
+}
+
+
+
+/* FOOTER ***********************************************************/
+
+footer {
+  clear: both;
+  padding-top: 6rem;
+  text-align: center;
+}
