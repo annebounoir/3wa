@@ -1,0 +1,290 @@
+/*
+    Utilisation du reset.css ou du normalize.css
+    Utilisation du plugin jQuery Flexslider :
+        cliquer sur ce lien
+        télécharger le plugin
+        suivre les instructions (Step 1 à 3)
+
+CSS
+
+    Largeur limité à 80% maximum pour certains éléments
+    Taille de la police :
+        nav : 1.4em
+        titres h2 : 2em
+        titres vignette : 1.8em
+    Police utilisé : Roboto Slab
+    Réussir à créer les espaces entre chaque vignette "Moto" de manière la plus simple possible (utilisation des pseudo classe)
+    Changer la couleur des puces du flexslider
+
+
+      background color : #444;
+      dark-grey : #333;
+      yellow : #ff9d00;
+
+*/
+
+/* @font-face */
+
+@font-face {
+ font-family: "Bodega";
+ src: url("../webfonts/BodegaSans_Black.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
+}
+
+/* style par défaut ********************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* soit 1 rem = 10px */
+}
+
+body {
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background-image: url(../img/bg_body.svg);
+  background-color : #444;
+  color: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover,
+a:focus,
+a:active {
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Bodega", serif;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 1em 0;
+  text-align: center;
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 2em;
+}
+
+h3 {
+  font-size: 1.8em;
+  color: #ff9d00;
+  border-bottom: solid 1px #ff9d00;
+}
+
+span {
+  color: #ff9d00;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 10px #222;
+}
+
+figure {
+  margin: 0;
+}
+
+/* class structure */
+
+.container {
+  margin: 2rem;
+}
+
+/*desktop*/
+@media screen and (min-width : 1024px) {
+  .container {
+    margin: 0 15%;
+  }
+}
+
+
+/* HEADER ****************************************************/
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(0.45turn, #fff 50%, #333 50%);
+  padding: 3rem;
+}
+
+.banner_logo {
+  align-self: center;
+}
+
+.banner_nav {
+  margin-top: 2rem;
+  font-family: "Bodega", serif;
+  font-size: 1.4em;
+  text-align: right;
+}
+
+.banner_nav a {
+  display: block;
+  padding-top: 2rem;
+  line-height: 2;
+}
+
+.banner_nav a:first-child {
+  padding-top: 0;
+}
+
+/*tablette*/
+@media screen and (min-width : 768px) {
+  .banner {
+   flex-direction: row;
+   background: linear-gradient(0.30turn, #fff 50%, #333 50%);
+  }
+
+  .banner_nav {
+    margin-top: 0;
+  }
+}
+
+/*desktop*/
+@media screen and (min-width : 1024px) {
+
+  .banner {
+    margin: 0;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+/* MAIN *******************************************************/
+
+main h2 {
+  margin: 1.5em 0 0.8rem 0;
+  padding: 1.5rem;
+  border-top: solid 3px rgb(50, 50, 50, 0.5);
+  border-left: solid 3px rgb(50, 50, 50, 0.5);
+}
+
+.top-article {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #fff;
+  color: #555;
+  text-align: center;
+}
+
+.social {
+  text-align: center;
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.social a {
+  display: block;
+  padding: 1rem;
+}
+
+@media screen and (min-width : 1024px) {
+
+  .selection-article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .top-article {
+    margin: 0;
+    text-align: center;
+    flex-basis: 22%;
+  }
+
+  .box {
+    text-align: left;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 35%;
+  }
+
+  .social a {
+    display: inline-block;
+  }
+
+}
+
+/* FOOTER *****************************************************/
+
+.mention {
+  margin-top: 5rem;
+  padding: 3rem;
+  box-shadow: 0px 0px 10px #222;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.mention aside {
+  margin-bottom: 4rem;
+}
+
+footer nav {
+  padding: 0 4rem;
+}
+
+.mention a {
+  display: inline-block;
+  width: 50%;
+  text-decoration: underline;
+  padding: 1rem;
+}
+
+.mention h2 {
+  border: none;
+  margin-top: 0;
+}
+
+@media screen and (min-width : 768px) {
+  .mention a {
+    display: inline;
+  }
+}
+
+/*desktop*/
+@media screen and (min-width : 1024px) {
+  .mention {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem 15%;
+  }
+}
+
+
+/* CLASS ********************************************************/
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #ff9d00;
+}

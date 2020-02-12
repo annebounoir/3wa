@@ -1,0 +1,142 @@
+/*
+Dark-grey : #444444
+medium-grey : #555555
+ */
+
+/* PAR DEFAUT */
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* soit 1 rem = 10px */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #555;
+  font-family: verdana, sans-serif;
+  font-size: 1.6rem;
+  line-height: normal;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: normal;
+  margin-top : 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header, footer {
+  background-color: #444;
+}
+
+/* HEADER *****************************************/
+
+header{
+  padding: 1rem;
+}
+
+
+/* MAIN ****************************************/
+
+main {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+}
+
+figure {
+  display: none;
+}
+
+.figure-active {
+  display: block;
+  position: relative;
+  margin : 0 7rem;
+  border: solid 1rem #f2f2f2;
+  border-radius: 2rem;
+
+}
+
+figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 2.5rem;
+  color: #000;
+  background: rgba(255, 255, 255, 0.5)
+}
+
+.carousel img {
+  border-radius: 1rem;
+}
+
+nav a {
+  width: 7rem;
+  height: 7rem;
+  margin-top: -3.5rem;
+  position: absolute;
+  top : 50%;
+  text-align: center;
+  font-size: 5rem;
+  line-height: 7rem;
+}
+
+#prev {
+  left: 0;
+}
+
+#next {
+  right: 0;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active
+ {
+  background: rgba(255, 255, 255, 0.5);
+  color: #555;
+}
+
+/* FOOTER **********************************************/
+
+footer {
+  padding: 2rem;
+  text-align: center;
+}
+
+footer a {
+  display: block;
+  font-size: 3rem;
+}

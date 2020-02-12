@@ -33,7 +33,7 @@ let voiture = {
   year: year,
   date: date,
   passagers: ["Pierre", "Paul", "Jacques"]
-}
+};
 
 document.write("<ul>");
 document.write(`<li>${voiture.marque}</li>`);

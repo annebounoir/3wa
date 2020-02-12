@@ -1,0 +1,86 @@
+/* @font-face */
+
+
+
+/* style par défaut ********************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* soit 1 rem = 10px */
+}
+
+body {
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-style: normal;
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+figure {
+  margin: 0;
+}
+
+
+/* HEADER ****************************************************/
+
+.banner {
+
+}
+
+/* MAIN *******************************************************/
+
+main {
+
+}
+
+/* FOOTER *****************************************************/
+
+.mention {
+  font-size: 1.2rem;
+}
+
+/* CLASS ********************************************************/
+
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.btn {
+  display: inline-block;
+}
+
+/* @media query ***************************************************/
+
+/*tablette*/
+@media screen and (min-width : 768px) {
+
+}
+
+/*desktop*/
+@media screen and (min-width : 1024px) {
+
+}

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/print.css" media="print">
     <link rel="stylesheet" href="css/style.css" media="screen">
-    <title></title>
   </head>
   <body>
 
@@ -28,7 +27,20 @@
       <section>
         <h1>Bienvenue sur le site de Creasoul</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <img src="img/illu.jpg" srcset="img/illu-mobile.jpg 768w, img/illu-tablette.jpg 1024w" sizes="100vw" alt="illustration">
+        <img
+          src="img/illu.jpg"
+          srcset="img/illu.jpg 1500w,
+                  img/illu-mobile.jpg 768w,
+                  img/illu-tablette.jpg 1024w"
+          sizes="100vw"
+          alt="Le Château Ambulent">
+        <!-- alternative avec picture
+        <picture>
+          <source src="img/illu-tablette.jpg" media="(max-width:1023px)">
+          <source src="img/illu-mobile.jpg" media="(max-width:767px)">
+          <img src="img/illu.jpg" alt="le Château Ambulent">
+        </picture>
+        -->
         <article>
           <h2>Lorem ipsum dolor sit amet</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit <span>in voluptate velit</span> esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

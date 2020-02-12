@@ -1,0 +1,155 @@
+/*
+A l'aide de la propriété "position" et de ses valeurs "fixed" et "sticky", reproduire la maquette jointe.
+Le contenu fait 80% de la fenêtre du navigateur.
+Faire en sorte d'avoir suffisamment de contenu pour avoir un scroll (par exemple, 2 sections ayant chacune 2 articles avec 2. paragraphes)
+Le pied de page est présent en bas de la fenêtre du navigateur, quel que soit le scroll.
+Par défaut, le menu se trouve sous le titre et la phrase d'introduction. Au scroll, celui-ci remonte et se cale à 2rem du haut de la page pour rester fixe ensuite.
+
+#ff4500
+*/
+
+/* PAR DEFAUT *************************************/
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* soit 1 rem = 10px */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-bottom: 100px;
+  text-align: left;
+  font-family: verdana, sans-serif;
+  font-size: 1.6rem;
+  line-height: normal;
+  color : #000;
+}
+
+main {
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: 'Exo', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1 {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 4rem;
+}
+
+h2 {
+  margin-top: 4rem;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+}
+
+h3 {
+  margin-top: 3rem;
+  font-size: 2rem
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+/* HEADER *********************************************/
+
+header h1, header p {
+   margin-left: 10%;
+   margin-right: 10%;
+}
+
+/* NAV - menu déroulant *****************************/
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 1.5rem 10%;
+  background-color: #ff4500;
+  z-index: 2000;
+}
+
+nav a {
+  padding: 1rem;
+  display: inline-block;
+  color: #fff;
+}
+
+nav ul, nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* rubriques */
+
+nav > ul /* > (chevron) cible les enfants directs de nav */ {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > ul > li {
+ position: relative;
+}
+
+nav > ul > li > a {
+  font-size: 1.8rem;
+}
+
+nav > ul > li > a:hover {
+  background-color: #fff;
+  color: orange;
+}
+
+/* sous rubriques */
+
+nav ul ul {
+  display: none;
+  position : absolute;
+  background-color: #000;
+}
+
+nav li:hover ul {
+  display: block;
+}
+
+nav ul ul a {
+  width: 300px;
+  border-bottom: solid 1px #fff;
+}
+
+nav ul ul a:hover {
+  color: #ff4500;
+}
+
+/* FOOTER *********************************************/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  background-color: #ff4500;
+  text-align: center;
+  color: #fff;
+}
+
+footer a {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+}
