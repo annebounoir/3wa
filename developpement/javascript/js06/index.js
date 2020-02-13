@@ -26,6 +26,6 @@ let user = {
   getNameEtAge: function() {
     return this.name + this.age;
   },
-}
+};
 
-console.log(user.getNameEtAge())
+console.log(user.getNameEtAge());
