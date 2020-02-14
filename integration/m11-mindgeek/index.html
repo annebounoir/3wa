@@ -15,9 +15,10 @@
   </head>
   <body>
   <!-- HEADER -->
-    <header class="banner">
+    <header class="banner flex">
       <a class="banner_logo" href="./index.html"><img src="img/logo.png" alt="Mind Geek"></a>
-      <nav class="nav flex container">
+      <!-- <a id="open" class="burger" href="#navigation"><i class="fas fa-bars" aria-hidden="true"></i></a> -->
+      <nav class="nav flex"> <!--id="navigation"-->
         <a href="./serveur-mutualise.html" class="banner_link"><i class="fas fa-users" aria-hidden="true"></i>Serveur Mutualisé</a>
         <a href="./serveur-dedie.html" class="banner_link"><i class="fas fa-user" aria-hidden="true"></i>Serveur Dédié</a>
         <a href="./cloud.html" class="banner_link"><i class="fas fa-cloud" aria-hidden="true"></i>Solution "Cloud"</a>
@@ -27,17 +28,57 @@
         <h1>L'hébergement à prix libre</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-      <form>
-        <p class="search">
-          <label for="search">Que cherchez-vous ?</label>
-          <input type="search" id="search" name="search"
-           aria-label="Rechercher dans le site">
-        </p>
-        <button>Search</button>
+      <form method="get" class="banner_form">
+        <input type="search" id="search" name="search"
+           aria-label="que cherchez-vous ?" placeholder="Que cherchez-vous ?">
+        <button type="submit">Search</button>
       </form>
     </header>
+
+
   <!-- MAIN -->
-    <main class="container">
+    <main>
+
+      <section class="flex container">
+        <header class="flex-intro home">
+          <h2>Notre solution en 3 points</h2>
+        </header>
+
+        <article class="flex-column home">
+          <h3><i class="fas fa-cogs" aria-hidden="true"></i>Configuration</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </article>
+        <article class="flex-column home">
+          <h3><i class="fas fa-chart-area" aria-hidden="true"></i>Monitoring</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </article>
+        <article class="flex-column home">
+          <h3><i class="fas fa-database" aria-hidden="true"></i>Sauvegarde</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </article>
+      </section>
+
+      <section class="flex container">
+        <header class="flex-intro home">
+          <h2>Choisissez votre style d'hébergement</h2>
+        </header>
+
+        <article class="flex-column home">
+          <h3><i class="fas fa-users" aria-hidden="true"></i>Serveur Mutualisé</h3>
+          <p class="price">19€ / Mois</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </article>
+        <article class="flex-column home">
+          <h3><i class="fas fa-user" aria-hidden="true"></i>Serveur Dédié</h3>
+          <p class="price">39€ / Mois</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </article>
+        <article class="flex-column home">
+          <h3><i class="fas fa-cloud" aria-hidden="true"></i>Service Cloud</h3>
+          <p class="price">49€ / Mois</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </article>
+      </section>
 
     </main>
   <!-- FOOTER -->
