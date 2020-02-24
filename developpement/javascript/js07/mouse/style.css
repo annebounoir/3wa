@@ -1,0 +1,59 @@
+.rectangle {
+  width : 400px;
+  height : 300px;
+  background-color : royalblue;
+  border-radius: 10px;
+}
+
+.important {
+  background-color: firebrick;
+}
+
+.good {
+  background-color: limegreen;
+}
+
+.cache {
+  visibility: hidden;
+}
+
+
+/*
+let date = new Date();
+let div  = document.getElementById('date');
+let p = document.createElement('p');
+let string = null;setInterval(function() {
+    date = new Date();
+    string = `${date.getHours()} ${date.getMinutes()} ${date.getSeconds()}`;
+    p.innerText = string;
+}, 1000);
+div.classList.add('classdate');
+p.classList.add('classdate');
+div.appendChild(p);
+
+Laurent  15 h 58
+
+function test() {
+    console.log('hover');
+}
+div.addEventListener('mouseover', test);
+div.addEventListener('mousemove', function() {
+    console.log('hover');
+});div.addEventListener('mouseenter', function() {
+    console.log('mouse enter');
+});div.addEventListener('mouseout', function() {
+    console.log('mouse out');
+});div.addEventListener('click', function() {
+   console.log('click');
+});
+
+Nouveaux messages
+16 h
+
+// double click
+
+16 h
+div.addEventListener('dblclick', function() {
+    console.log('mouse enter');
+});
+*/

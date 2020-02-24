@@ -1,24 +1,16 @@
 <?php
 
-function tirageNbr() {
-   return rand ( 1 , 49 );
-}
+function tirageNbr($nombres = [], $a = 1) {
+  for ($a; $a <= 6; $a++) {
+     $nombre = rand ( 1 , 49 );
+     if (in_array ($nombres, $nombre)) {
+       return tirageNbr($nombres, $a);
+     }
 
-
-$loterie = [
-
-];
-
-for ($a = 1; $a <= 6; $a++)
-  {
-    $nombre = tirageNbr();
-    var_dump($nombre);
-      if (in_array ($nombre, $loterie)) {
-        $nombre = tirageNbr();
-      }
-    array_push ($loterie, $nombre);
-
+  $nombres[] = $nombre;
   }
+  return $nombres;
+}
 
  ?>
 
@@ -31,8 +23,8 @@ for ($a = 1; $a <= 6; $a++)
   <body>
     <h1>tirage de la loterie</h1>
     <?php
-    sort($loterie);
-    foreach ($loterie as $nombre) {
+    sort($nombres);
+    foreach ($nombres as $nombre) {
       echo ('<p>' . $nombre . '</p>');
     }
     ?>

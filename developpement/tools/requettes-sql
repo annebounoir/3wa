@@ -1,0 +1,125 @@
+CREATE DATABASE todolist CHARACTER SET utf8 COLLATE utf8_general_ci; 
+
+CREATE TABLE tasks (id INT(11) PRIMARY KEY AUTO_INCREMENT,
+                    deadline DATE NOT NULL,
+                    titre CHAR(50) NOT NULL,
+                    description TEXT(1000) NOT NULL, 
+                    priorite CHAR(7) NOT NULL 
+                   ) ENGINE=InnoDB CHARACTER SET=utf8;  
+
+
+// ATTENTION SUPPRIME LA TABLE >  DROP TABLE tasks; // 
+
+CREATE TABLE users(id INT(11) PRIMARY KEY AUTO_INCREMENT,
+                   name CHAR(150) NOT NULL,
+                   email CHAR(255) NOT NULL UNIQUE
+                   );
+
+ALTER TABLE tasks ADD users_id int(11);
+
+ALTER TABLE tasks 
+ADD CONSTRAINT fk_user_id
+FOREIGN KEY (users_id) REFERENCES users(id); 
+
+
+ajouter des données dans la table :
+
+INSERT INTO users (name, email) VALUES('camille', 'camille.cacao@mail.com');
+ 
+INSERT INTO tasks (deadline, titre, description, priorite, users_id) VALUES ('2020-02-20', 'cacao party', 'acheter du cacao pour la soirée pyjama et bridge de tante Ursule', 'basse', 1); 
+
+supprimer une colonne :
+ALTER TABLE tasks DROP statut; 
+
+
+ajouter une colonne :
+ALTER TABLE tasks ADD statut CHAR(10) NOT NULL AFTER priorite;
+
+UPDATE `tasks` SET `statut` = 'à venir' WHERE `tasks`.`id` = 1 
+
+
+affiche les taches de 'users 1' :
+SELECT * FROM tasks WHERE users_id = 1; 
+
+affiche les titre et description de 'users 1' :
+SELECT titre, description FROM tasks WHERE users_id = 1; 
+
+renomme id pour l'affichage : 
+SELECT users_id as indentifiant FROM tasks WHERE users_id = 1; 
+
+SELECT * FROM tasks WHERE users_id = 1 LIMIT 5;
+SELECT * FROM tasks WHERE users_id = 1 ORDER BY deadline DESC;
+
+SELECT * FROM tasks WHERE users_id = 1 ORDER BY deadline DESC LIMIT 5; 
+
+SELECT name, titre FROM users as u JOIN tasks as t ON u.id = t.users_id WHERE u.id = 1;
+
+
+
+SELECT MAX(price) FROM products;
+
+SELECT MIN(price) FROM products;
+
+SELECT AVG(price) FROM products;
+
+SELECT price FROM products WHERE price BETWEEN 50 AND 100;
+
+SELECT price FROM products HAVING price > 1000;
+
+SELECT name FROM products WHERE name LIKE '%pro%'; (qui contient pro)
+SELECT name FROM products WHERE name LIKE 'pro%'; (qui commence par pro)
+SELECT name FROM products WHERE name LIKE '%pro'; (qui finisse par pro)
+
+
+SELECT NOW() as "aujourd'hui" (affiche la date du jour et l'heure)
+
+SELECT DATEDIFF(NOW(), '2019-02-21 09:05:32') (affiche la difference entre les deux dates)
+
+
+
+Exercices : 
+
+7 =
+SELECT orderNumber, orderDate, shippedDate, DATEDIFF(shippedDate, orderDate) AS days, status FROM orders WHERE status = "in Process" OR DATEDIFF(shippedDate, orderDate) > 10 ORDER BY days, orderDate DESC
+
+
+8 = 
+La liste des produits (nom et valeur du stock à la vente) des années 1960
+SELECT productName, MSRP*quantityInStock AS stockPrice FROM products WHERE productName LIKE '196%'
+
+
+9 =
+Le prix moyen d'un produit vendu par chaque vendeur triés par prix moyen décroissant
+SELECT productVendor,ROUND( AVG(MSRP)) FROM products GROUP BY productVendor ORDER BY AVG(MSRP) DESC
+
+10 =
+Le nombre de produits pour chaque ligne de produit
+SELECT productline, COUNT(productName) as nbrproducts FROM products GROUP BY productline
+
+11 =
+Le total du stock et le total de la valeur du stock à la vente de chaque ligne de produit pour les produits vendus plus de 100$ trié par total de la valeur du stock à la vente
+
+SELECT 
+quantityInStock, 
+quantityInStock*MSRP as globalPrice
+FROM products
+GROUP BY productline
+WHERE MSRP > '100'
+ORDER BY globalPrice
+
+quantity in stock 
+quantity in stock*MSRP 
+GROUP BY productline 
+WHERE MSRP > '100' 
+ORDER BY quantity in stock*MSRP 
+
+
+
+
+
+
+depuis le terminal : 
+mysql -uroot -p
+use nom de ma base de donné
+
+

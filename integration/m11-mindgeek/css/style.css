@@ -126,20 +126,59 @@ figure {
   padding-top: 3rem;
 }
 
-#navigation {
-  transform: translateY(-100%);
-}
-
-#navigation:target {
-  display: block;
-  transform: translateY(-0%);
-}
-
 .banner_logo {
-  width: 90px;
   display: block;
+  width: 90px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#menu {
+  position: relative;
+  margin-top: 1rem;
+}
+
+#navigation {
+  transform: translateX(-200%);
+  position: absolute;
+  height: 0;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+#menu:target #navigation {
+  display: block;
+  transform: translateX(-0%);
+  position: relative;
+  height: auto;
+}
+
+#open,
+#close {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  right: 2rem;
+  top: -40px;
+  color: #fb8b9b;
+  z-index: 1000;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#menu:target #open {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+#menu:target #close {
+  display: block;
 }
 
 .banner_link {
@@ -207,18 +246,34 @@ button {
 /*desktop*/
 @media screen and (min-width : 1024px) {
 
-  #open {
-    display: none;
-  }
+    #open {
+      display: none;
+    }
+
+    #close {
+      display: none;
+    }
+
+    #navigation {
+      transform: translateX(-0%);
+      margin-right: 10%;
+      align-content: center;
+    }
+
+    #navigation a {
+      display: inline-block;
+      align-content: flex-end;
+    }
 
   .banner_logo {
-    margin-left: 10%;
+    margin: 0 0 2rem 10% ;
     align-content: center;
   }
 
-  header nav {
+  #menu {
     margin-right: 10%;
-    align-items: center;
+    align-content: center;
+    flex-basis: 60%;
   }
 
   .banner_form {
@@ -230,9 +285,11 @@ button {
 
 /* Home intro */
 .banner_intro {
+  flex-basis: 100%;
   display: flex;
   min-height: 30vh;
   padding: 0 10%;
+  margin: 0;
   flex-direction: column;
   justify-content: center;
   background-image: url(../img/background.jpg);
