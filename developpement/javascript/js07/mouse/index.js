@@ -13,6 +13,13 @@ button.addEventListener('click', function(){
   rectangle.classList.add('cache');
 });
 
+rectangle.addEventListener('dblclick', function() {
+  if (rectangle.classList.contains('important')) {
+    rectangle.classList.remove('important');
+  }
+  rectangle.classList.add('good');
+});
+
 
 rectangle.addEventListener('mouseenter', function() {
     rectangle.classList.add('important');
@@ -20,11 +27,4 @@ rectangle.addEventListener('mouseenter', function() {
 
 rectangle.addEventListener('mouseout', function() {
   rectangle.classList.remove('important');
-});
-
-rectangle.addEventListener('dblclick', function() {
-  if (rectangle.classList.contains('important')) {
-    rectangle.classList.remove('important');
-  }
-  rectangle.classList.add('.good');
 });

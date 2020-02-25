@@ -6,7 +6,7 @@
 }
 
 .important {
-  background-color: firebrick;
+  background-color: firebrick !important; 
 }
 
 .good {

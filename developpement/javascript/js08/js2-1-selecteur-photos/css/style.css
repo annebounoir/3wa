@@ -1,0 +1,67 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+li {
+  flex-basis: 15%;
+  margin: 1em;
+  padding: 0.5em;
+  transition: all 0.5s ease-out;
+  align-self: stretch;
+}
+
+.silver {
+  background-color: silver;
+}
+
+.selected {
+  background-color: forestgreen;
+  border-radius: 5px;
+}
+
+.nbrSelect {
+  color: firebrick;
+  font-weight: bold;
+}
+
+/*
+* Le nombre de photos sélectionnées doit s'afficher en rouge et en gras.
+* Les photos doivent s'afficher les unes à côté des autres sur une largeur de 800 OK pixels, sans les puces, avec une marge de *1em* et un padding de *0.5em*. OK
+* Au survol d'un élément de la liste *photo-list*, la couleur de fond devient grise (*silver*). PK
+* Quand un élément de la liste *photo-list* à la classe *selected*, la couleur de fond devient verte (*forestgreen*).
+* Le changement de couleur de fond d'un élément de la liste *photo-list* doit s'animer.
+
+*/
