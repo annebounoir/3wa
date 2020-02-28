@@ -99,22 +99,37 @@ SELECT productline, COUNT(productName) as nbrproducts FROM products GROUP BY pro
 11 =
 Le total du stock et le total de la valeur du stock à la vente de chaque ligne de produit pour les produits vendus plus de 100$ trié par total de la valeur du stock à la vente
 
-SELECT 
-quantityInStock, 
-quantityInStock*MSRP as globalPrice
-FROM products
-GROUP BY productline
-WHERE MSRP > '100'
-ORDER BY globalPrice
-
-quantity in stock 
-quantity in stock*MSRP 
-GROUP BY productline 
-WHERE MSRP > '100' 
-ORDER BY quantity in stock*MSRP 
+SELECT productLine, SUM(quantityInStock), SUM(quantityInStock*MSRP) FROM products WHERE MSRP > '100' GROUP BY productLine ORDER BY SUM(quantityInStock*MSRP)
 
 
+12 =
+La quantité du produit le plus en stock de chaque vendeur trié par vendeur  
 
+SELECT MAX(quantityInStock), productVendor FROM products GROUP BY productVendor ORDER BY productVendor
+
+13 = Le prix de l'avion qui coûte le moins cher à l'achat
+SELECT MIN(buyPrice) FROM products WHERE productLine = 'Planes'
+
+
+14 = Le crédit des clients qui ont payé plus de 20000$ durant l'année 2004 trié par crédit décroissant
+SELECT amount FROM payments WHERE amount > 20000 AND paymentDate LIKE '2004%' ORDER BY amount DESC
+
+
+15 = La liste des employés (nom, prénom et fonction) et des bureaux (adresse et ville) dans lequel ils travaillent
+SELECT lastName, firstName, jobTitle, city, addressLine1, addressLine2 FROM `employees` JOIN offices ON employees.officeCode = offices.officeCode
+
+16 =  liste des clients français ou américains (nom du client, nom, prénom du contact et pays) et de leur commercial dédié (nom et prénom) triés par nom et prénom du contact
+
+SELECT customerName, contactLastName, contactFirstName, lastName, firstName, country FROM employees JOIN customers ON customers.salesRepEmployeeNumber = employees.employeeNumber ORDER BY contactLastName, contactFirstName
+
+17 = 
+SELECT orderNumber, productName, orderdetails.productCode, orderLineNumber, MSRP-priceEach AS REMISE FROM orderdetails JOIN products ON orderdetails.productCode = products.productCode  WHERE productLine = 'Motorcycles' or 'Classic Cars' ORDER BY orderNumber, REMISE DESC
+
+18 = 
+SELECT SUM(amount), contactFirstName, customerName, customers.customerNumber, country FROM customers JOIN payments ON customers.customerNumber = payments.customerNumber WHERE country = 'USA' OR country = 'France' OR country = 'Germany' GROUP BY payments.customerNumber HAVING SUM(amount) > '50000' ORDER BY country, SUM(amount) DESC
+
+19 = 
+SELECT orders.orderNumber, orders.orderDate, quantityOrdered*priceEach AS orderPrice FROM orders JOIN orderdetails ON orders.orderNumber = orderdetails.orderNumber  JOIN customers ON orders.customerNumber = customers.customerNumber WHERE city = 'NYC' ORDER BY customerName, orders.orderDate
 
 
 

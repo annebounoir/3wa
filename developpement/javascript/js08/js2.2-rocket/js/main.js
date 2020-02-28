@@ -27,7 +27,6 @@ btn.addEventListener('click', function() {
         rocket.classList.add('tookOff');
         clearInterval(seconds);
       }
-
     }, 1000);
 });
 
@@ -35,21 +34,21 @@ function nbrRandom(max, min) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-
-function addClassToStar(div) {
-
-  let classNbr = nbrRandom(4, 1);
-
-  // convertir
-  if (classNbr === 1) {
+function convertir(div, nbr) {
+  if (nbr === 1) {
     div.classList.add('tiny');
   }
-  else if (classNbr === 2) {
+  else if (nbr === 2) {
     div.classList.add('big');
   }
   else {
     div.classList.add('normal');
   }
+}
+
+function addClassToStar(div) {
+  let classNbr = nbrRandom(4, 1);
+  convertir(div, classNbr);
 }
 
 
@@ -60,13 +59,10 @@ function positionAleatoire(item) {
 
 
 function newStar() {
-
   let star = document.createElement('div');
-
   star.classList.add('star');
   addClassToStar(star);
   positionAleatoire(star);
-
   body.append(star);
 }
 
