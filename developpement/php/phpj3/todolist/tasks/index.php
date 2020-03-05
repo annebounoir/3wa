@@ -2,33 +2,6 @@
 
 include('../connection.php');
 
-$task_id = clean($_GET['task_id']);
-if(isset($task_id) && !empty($task_id)) {
-  $query = $connection->prepare('SELECT * FROM tasks WHERE id=' . $task_id );
-  $query->execute();
-  $task = $query->fetch(PDO::FETCH_ASSOC);
-  $connection = null;
-}
-
-/*
-if(isset($_POST['task_id']) && !empty($_POST['task_id'])) {
-  $post = $_POST;
-  $task_id = clean($post['task_id']);
-  $delete = $connection->prepare('DELETE FROM tasks WHERE id= :id ');
-  $delete->bindParam(':id', $task_id);
-  $delete->execute();
-  header('Location:http://localhost/developpement/php/phpj3/to-do-list/');
-}*/
-
-if(isset($_POST['task_id']) && !empty($_POST['task_id'])) {
-  $deletebutton = $_POST;
-  $task_id = clean($deletebutton['task_id']);
-  $delete = $connection->prepare('DELETE FROM tasks WHERE id= ' . $task_id);
-  $delete->execute();
-  $connection = null;
-  header('Location:http://localhost/developpement/php/phpj3/to-do-list/');
-}
-
 ?>
 
 

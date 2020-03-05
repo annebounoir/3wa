@@ -8,6 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/all.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css" media="screen">
     </head>
   </head>
@@ -16,11 +17,11 @@
     <header class="banner">
       <a class="banner_logo" href="./"><img src="img/logo.png" alt="Cup Of Tea"></a>
       <div class="panier">
-        <p class="inline">mon panier</p>
-        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-        <p class="inline"><strong>42,00€</strong></p>
+        <p class="inline-block">mon panier</p>
+        <i class="fas fa-shopping-cart inline-block" aria-hidden="true"></i>
+        <p class="inline-block"><strong>42,00€</strong></p>
       </div>
-      <nav class="banner_nav">
+      <nav class="banner_nav flex">
         <a href="#" class="banner_link">Thé Noir</a>
         <a href="#" class="banner_link">Thé Vert</a>
         <a href="#" class="banner_link">Oolong</a>
@@ -28,17 +29,17 @@
         <a href="#" class="banner_link">Rooibos</a>
         <a href="#" class="banner_link">Notre Histoire</a>
       </nav>
-      <div class="promo-sticky">
+      <div class="promo-sticky flex bg-dark-green">
         <p>Livraison offerte à partir de 65€ d'achat !</p>
-        <p>Elu meilleur thé</p>
+        <img src="img/ribbon.svg" width="100" alt="Elu meilleur thé">
       </div>
     </header>
   <!-- MAIN -->
     <main class="container">
       <!-- MAIN HEADER PROMO -->
-      <header class="promo">
+      <header class="promo-header">
         <h1>C'est Noël, profitez-en !</h1>
-        <img src="img/offre-noel" alt="promo de Noël">
+        <img src="img/offre-noel.jpg" alt="promo de Noël">
         <p><small>Pour toute commande effectuée avant le 20 décembre</small></p>
         <div class="slider">
           <a href="#" class="slider-link active"><img src="img/slider/1.jpg" alt="Découvrez la boutique de Noël">
@@ -48,8 +49,8 @@
       </header>
 
       <!-- SECTION 1 -->
-      <section class="flex">
-        <h2>Choississez votre thé</h2>
+      <section class="flex-categorie">
+        <h2 class="basis100">Choississez votre thé</h2>
         <article class="categorie">
           <h3>Thé Noir</h3>
           <img src="img/tea/1.jpg" alt="thé noir">
@@ -72,29 +73,29 @@
         </article>
       </section>
       <!-- SECTION 2 -->
-      <div class="section">
+      <div class="section flex">
         <!-- ARTICLE 1 -->
-        <article class="categorie">
+        <article>
           <h2>Notre nouveauté</h2>
-          <img src="img/tea/1.jpg" alt="thé noir">
+          <img src="img/product/product2.jpg" alt="thé noir">
           <h3>Thé du hammam</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p>à partir de <strong class="block">8,50€</strong></p>
           <a class="btn">voir ce produit</a>
         </article>
         <!-- ARTICLE 2 -->
-        <article class="categorie">
+        <article>
           <h2>Notre nouveauté</h2>
-          <img src="img/tea/1.jpg" alt="thé noir">
+          <img src="img/product/product2.jpg" alt="thé noir">
           <h3>Thé du hammam</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p>à partir de <strong class="block">8,50€</strong></p>
           <a class="btn">voir ce produit</a>
         </article>
         <!-- ARTICLE 3-->
-        <article class="categorie">
+        <article>
           <h2>Notre nouveauté</h2>
-          <img src="img/tea/1.jpg" alt="thé noir">
+          <img src="img/product/product2.jpg" alt="thé noir">
           <h3>Thé du hammam</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p>à partir de <strong class="block">8,50€</strong></p>
@@ -104,15 +105,47 @@
     </main>
   <!-- FOOTER -->
     <footer>
-      <div class="info">
+      <div class="info flex bg-dark-green">
         <p><i class="fas fa-shopping-cart" aria-hidden="true"></i>paiement sécurité</p>
         <p><i class="fas fa-truck" aria-hidden="true"></i>ma livraison offerte</p>
         <p><i class="fas fa-shopping-cart" aria-hidden="true"></i>Carte de fidélité</p>
         <p><i class="fas fa-phone" aria-hidden="true"></i>service client</p>
-        <p><i class="fas fa-shopping-cart" aria-hidden="true">garantie qualité</i></p>
+        <p><i class="fas fa-check-circle" aria-hidden="true"></i>garantie qualité</p>
       </div>
-
-
+      <div class="flex">
+        <article class="flex-column">
+          <h4>Cup of tea</h4>
+          <nav>
+            <a href="#">Notre histoire</a>
+            <a href="#">Nos boutiques</a>
+            <a href="#">Le Thé de A à Z</a>
+            <a href="#">Espace clients Pro</a>
+            <a href="#">Recrutement</a>
+            <a href="#">contactez-nous !</a>
+            <a href="#">L'Ecole du Thé</a>
+          </nav>
+        </article>
+        <article class="flex-column">
+          <h4>Commandez en ligne</h4>
+          <nav>
+            <a href="#">Première visite</a>
+            <a href="#">Aide - FAQ</a>
+            <a href="#">Service client</a>
+            <a href="#">Suivre ma commande</a>
+            <a href="#">CGV</a>
+            <a href="#">Informations Légales</a>
+          </nav>
+        </article>
+        <article class="flex-column">
+          <h4>Suivez-nous !</h4>
+          <nav>
+            <a href="#">Notre histoire</a>
+            <a href="#">Nos boutiques</a>
+            <a href="#">Le Thé de A à Z</a>
+            <a href="#">Espace clients Pro</a>
+          </nav>
+        </article>
+    </div>
     </footer>
   </body>
 </html>

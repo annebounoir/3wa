@@ -1,0 +1,291 @@
+/* DEFAUT **********************/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: 'Relaway', sans-serif;
+  color: #666;
+}
+
+h1, h2, h3, nav, caption {
+  text-align: center;
+  font-family: 'Relaway', sans-serif;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 0px 0px 5px #666;
+  margin-top: 10vh;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+a {
+  text-decoration: none;
+  color: #C4A9DF;
+}
+
+/* HEADER ******************************************/
+
+header {
+  min-height: 55vh;
+  padding-top: 1.5em;
+  background-image: url(../img/fond.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+}
+
+nav .fa, .fab, .fad, .fal, .far, .fas {
+  display: block;
+}
+
+nav a {
+  display: inline-block;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+/* nav a:link {
+  color: #fff;
+}
+
+nav a:visited {
+  color: #000;
+} */
+
+nav a:hover, a:focus {
+  color: rgba(138, 98, 194, 0.3);
+}
+
+nav a.active {
+  color: #242e8f;
+}
+
+header p {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color : rgba(138, 98, 194, 0.3);
+}
+
+header p span {
+  text-transform: uppercase;
+}
+
+/* CONTACT ***********************************/
+
+/* table */
+table {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th, td, caption {
+  padding: 1em;
+  border: solid 1px #c6c6c6;
+}
+
+caption {
+  background-color: #C4A9DF;
+  text-align: left;
+  font-size: 2em;
+  color: #fff;
+}
+
+th:first-child {
+  text-align: left;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+tr:last-child td:last-child {
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tr:first-child {
+  background-color: #fff;
+}
+
+/* formulaire */
+
+form {
+  width: 70%;
+  margin: 10px auto 80px auto;
+  text-align: center;
+}
+
+fieldset {
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: solid 1px #c6c6c6;
+}
+
+fieldset p {
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+legend {
+  padding: 0 5px;
+  font-size: 1.3em;
+}
+
+select {
+  width: 100%;
+  border: solid 1px #c6c6c6;
+  background-color: #fff;
+  padding: 0.3em;
+}
+
+input {
+  border: none;
+  background-color: none;
+}
+
+input[type=text], input[type=email] {
+  border-bottom: solid 1px #c6c6c6;
+  padding-bottom: 0.2em;
+}
+
+[type=submit] {
+  background-color: #C4A9DF;
+  color: #fff;
+  padding: 0.5em;
+}
+
+[type=reset] {
+  background-color: #666;
+  color: #fff;
+  padding: 0.5em;
+}
+/*
+Test changements de style checkedbox + radio
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+input[type=checkbox]:checked {
+  background-color: #c4a9df;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+input[type=radio]:checked {
+  background-color: #c4a9df;
+}
+*/
+
+/* HOME PAGE ***************************************/
+
+main > article {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+.float-left {
+  max-width: 300px;
+  float: left;
+  margin: 0px 20px 20px 0;
+}
+
+.float-right {
+  max-width: 300px;
+  float: right;
+  margin: 0px 0px 20px 20px;
+}
+
+hr {
+  width: 70%;
+  color: rgba(138, 98, 194, 0.3);
+}
+
+.art-group {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 2%;
+  background: linear-gradient(25deg, #e1b8e7, #bbbbe3);
+}
+
+.art-group article {
+  display: inline-block;
+  width: 26%;
+  margin: 0 3.66%;
+  vertical-align: top;
+  text-align: center;
+  color: #fff;
+}
+
+.art-group img:hover {
+  opacity: 0.5;
+}
+
+iframe {
+  width: 100%;
+  min-height: 30vh;
+  border: none;
+  margin-bottom: 40px;
+}
+
+
+/*  FOOTER ************************************/
+
+footer {
+  padding: 2% 10%;
+  background: linear-gradient( 45deg, #e1b8e7, #bbbbe3);
+  text-align: center;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+}

@@ -1,26 +1,25 @@
-/* @font-face */
+/*Et voilà l'exercice final en intégration ! Ici, aucune instructions sur les propriétés à utiliser : à vous de faire le choix entre le float, le inline-block, le flexbox, le position, etc.
 
-@font-face {
- font-family: "Cardo";
- src: url("../fonts/cardo/cardo-regular.woff") format("woff");
- font-weight: normal;
- font-style: normal;
-}
+La largeur du site est de 1100px maximum
 
-@font-face {
- font-family: "Cardo";
- src: url("../fonts/cardo/cardo-italic.woff") format("woff");
- font-weight: normal;
- font-style: italic;
-}
+Taille de police :
+    Global :
+    - body = 16px
+    - h1 : 40px
+    - h2 : 25px
+    - h3 : 20px
 
-@font-face {
- font-family: "Cardo";
- src: url("../fonts/cardo/cardo-bold.woff") format("woff");
- font-weight: bold;
- font-style: bold;
-}
+    Page index et listing-product :
+    Affichage du prix à 24px
 
+    Page product :
+    h3 : 30px
+    Affichage du prix à 40px
+
+Transitions :
+nav : background qui devient blanc avec une opacité de 20%
+btn : opacité qui passe à 75%
+"choisissez votre thé" : opacité à 0.5 sauf sur l'image survolé (reste à 1) */
 
 /* style par défaut ********************************************/
 
@@ -34,9 +33,11 @@ html {
 }
 
 body {
+  background-color: #f2f2f2;
   font-family: Verdana, Helvetica, sans-serif;
   font-size: 1.6rem;
-  line-height: 1.6;
+  line-height: 1.5;
+  text-align: center;
 }
 
 a {
@@ -52,6 +53,27 @@ a:active {
 h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: normal;
+  color: #96b011;
+  font-family: 'Amaranth', Verdana, sans-serif;
+}
+
+h1 {
+  4rem;
+}
+
+h2 {
+  2.5rem;
+  background-color: #fff;
+}
+
+h3 {
+  2rem;
+}
+
+h4 {
+  2rem;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 img {
@@ -63,34 +85,154 @@ figure {
   margin: 0;
 }
 
+.fas {
+  display: block;
+}
 
-/* HEADER ****************************************************/
+/* STRUCTURE ********************************************************/
 
+footer,
 .banner {
-
+  background-color: #96b011;
+  color: #fff;
 }
 
-/* MAIN *******************************************************/
-
-main {
-
+footer a,
+.banner a {
+  display: block;
+  color: #fff;
 }
 
-/* FOOTER *****************************************************/
+footer {
+  padding-bottom: 2rem;
+}
 
-.mention {
-  font-size: 1.2rem;
+.section,
+section {
+  background-color: #fff;
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+@media screen and (min-width : 768px) {
+  footer .info {
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: space-between;
+  }
+
+  footer div {
+    justify-content: space-around;
+  }
+}
+
+
+article {
+  padding: 1rem;
+}
+
+footer div {
+  padding: 1rem;
 }
 
 /* CLASS ********************************************************/
 
 .container {
-  margin-left: 10%;
-  margin-right: 10%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .btn {
   display: inline-block;
+  padding: 1.2rem 2.2rem;
+  background-color: #b09067;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+/* FLEX ********************************************************/
+
+.flex-categorie {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.categorie {
+  width: 45%;
+}
+
+@media screen and (min-width : 768px) {
+
+  .flex-categorie {
+    justify-content: space-between;
+  }
+
+  .categorie {
+    width: auto;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .wrap {
+    flex-wrap: wrap;
+  }
+
+  .basis100 {
+    flex-basis: 100%;
+  }
+
+}
+
+
+
+
+/* SLIDER ********************************************************/
+
+.promo-header {
+  display: none;
+}
+
+.slider-link {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width : 768px) {
+  .promo-header {
+    display: block;
+  }
+}
+
+/* color ********************************************************/
+
+.bg-dark-green {
+  background-color: #879e0f;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+  margin: 0 1rem;
 }
 
 /* @media query ***************************************************/

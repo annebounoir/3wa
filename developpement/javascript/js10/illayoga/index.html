@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="Contact Ila Yoga" content="description">
+    <title>Conctact Ila Yoga</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="#">Agenda</a>
+        <a href="#">Livre d'or</a>
+        <a href="#">Album Photo</a>
+        <a href="./contact.html" class="active">Nous contacter</a>
+      </nav>
+      <p><strong><span>offre promo:</span> votre premier cours d'essai gratuit !</strong></p>
+      <h1>Bienvenue sur le site d'Ila Yoga</h1>
+    </header>
+
+    <main>
+      <h2>Réserver vos places pour le prochain cours de Yoga du rire !</h2>
+
+      <table>
+        <caption>Yoga du rire avec Jacqueline (Paris)</caption>
+        <tr>
+          <th>Date</th>
+          <th>Horaires</th>
+          <th>Réservation</th>
+        </tr>
+        <tr>
+          <td>05 janvier</td>
+          <td>15h30</td>
+          <td><a href="#form">Réserver ce créneau</a></td>
+        </tr>
+        <tr>
+          <td>10 janvier</td>
+          <td>16h30</td>
+          <td><a href="#form">Réserver ce créneau</a></td>
+        </tr>
+        <tr>
+          <td>15 janvier</td>
+          <td>15h30</td>
+          <td><a href="#form">Réserver ce créneau</a></td>
+        </tr>
+        <tr>
+          <td>20 janvier</td>
+          <td>16h30</td>
+          <td><a href="#form">Réserver ce créneau</a></td>
+        </tr>
+        <tr>
+          <td>18 février</td>
+          <td colspan="2">Horaire à venir</td>
+        </tr>
+      </table>
+
+
+      <table>
+        <caption>Yoga du rire avec Roger (Marseille)</caption>
+        <tr>
+          <th>Date</th>
+          <th>Horaires</th>
+          <th>Réservation</th>
+        </tr>
+        <tr>
+          <td>05 janvier</td>
+          <td>15h30</td>
+          <td><a href="#form">Réserver ce créneau</a></td>
+        </tr>
+        <tr>
+          <td>10 janvier</td>
+          <td>16h30</td>
+          <td><a href="#form">Réserver ce créneau</a></td>
+        </tr>
+        <tr>
+          <td>15 janvier</td>
+          <td>15h30</td>
+          <td><a href="#form">Réserver ce créneau</a></td>
+        </tr>
+        <tr>
+          <td>20 janvier</td>
+          <td>16h30</td>
+          <td><a href="#form">Réserver ce créneau</a></td>
+        </tr>
+        <tr>
+          <td colspan="3">Autres dates à venir</td>
+        </tr>
+      </table>
+
+      <h3 id="form">Pour valider votre réservation, compléter ce formulaire :</h3>
+
+      <form method="post" action="index.html">
+        <fieldset>
+          <legend>Vos Coordonnées</legend>
+          <p class="field">
+            <label for="first-name">Votre Prénom</label>
+            <input type="text" id="firstname" name="prenom" value="" required>
+          </p>
+          <p class="field">
+            <label for="last-name">Votre Nom</label>
+            <input type="text" id="lastname" name="nom" value="" required>
+          </p>
+          <p class="field">
+            <label for="email">Votre Email</label>
+            <input type="email" id="email" name="email" value="" required placeholder="monnom@email.com">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Quelles sont les raisons de votre venue ?</legend>
+          <p>
+            <label for="detente">
+              <input type="checkbox" id="detente" name="reasons[]" value="detente">
+              Besoin de me détendre
+            </label>
+          </p>
+          <p>
+            <label for="sante">
+              <input type="checkbox" id="sante" name="reasons[]" value="sante">
+              Mon médecin m'a conseillé de venir
+            </label>
+          </p>
+          <p>
+            <label for="ami">
+              <input type="checkbox" id="ami" name="reasons[]" value="ami">
+              Je veux tester avec des amis
+            </label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Voulez-vous souscrire à notre programme de fidélité ?</legend>
+          <p>
+            <label for="yes">
+              <input type="radio" id="yes" name="affiliation" value="on" checked>
+              Oui
+            </label>
+          </p>
+          <p>
+            <label for="no">
+              <input type="radio" id="no" name="affiliation" value="off">
+              Non
+            </label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Comment avez-vous connu Ila Yoga ?</legend>
+            <select name="source" aria-label="choisissez une option" required>
+              <option>Votre choix</option>
+              <option value="1">Par internet</option>
+              <option value="2">Publicité</option>
+              <option value="3">Par des amis</option>
+            </select>
+        </fieldset>
+        <p>
+          <input type="submit" value="Valider" id="submitBtn" >
+          <input type="reset" value="Effacer">
+          <!-- ou
+          <button type="submit">Valider</button>
+          <button type="reset">Effacer</button>
+         -->
+        </p>
+      </form>
+
+
+    </main>
+
+    <footer>
+        <a href="https://3wa.fr/"><img src="img/twa.png" alt="logo 3wA" width="40"></a>
+        <p><small>Cet exercice de la <a href="#">3W Academy</a> est mis à disposition <a href="#">pour l'usage personnel des étudiants. Pas de Rediffusion - Attribution - Pas d'utilisation Commerciale - Pas de Modifications - International.</a> Les autorisations au-delà du champ de cette licence peuvent y être obtenues auprès de <a href="mailto:contact@3wa">contact@3wa.fr</a>. les maquettes ont été réalisées par <a href="#">Justine Muller.</a></small></p>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.js" charset="utf-8"></script>
+    <script src="js/json.js" charset="utf-8"></script>
+  </body>
+</html>
