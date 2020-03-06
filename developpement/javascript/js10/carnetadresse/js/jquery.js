@@ -10,39 +10,11 @@ $form = $('#form');
 $submitBtn = $('#submitBtn');
 $resetBtn = $('#resetBtn');
 $section = $(".all-contacts");
-$editState = false;
-
 
 $('#addcontact').on('click', function(e) {
  e.preventDefault();
  $form.fadeToggle(1000);
 });
-
-function addNewContact() {
-
-  $form.submit(function(e) {
-    e.preventDefault();
-    $newcontact = {
-      "firstname": $firstname.val(),
-      "lastname": $lastname.val(),
-      "email": $email.val(),
-      "mobile": $mobile.val(),
-      "address": $address.val()
-    }
-
-    if (!$editState) {
-      $contacts = getLocalStorage();
-      $contacts.push($newcontact);
-      localStorage.setItem('contact', JSON.stringify($contacts));
-
-      // reinitialise le form;
-      $form.trigger('reset');
-      document.location.reload('http://localhost/developpement/javascript/js10/carnetadresse/');
-    } else {
-      editContactValues($newcontact);
-    }
-  });
-}
 
 
 function getLocalStorage() {
@@ -51,26 +23,61 @@ function getLocalStorage() {
   if( JSON.parse(localStorage.getItem('contact')) && JSON.parse(localStorage.getItem('contact')).length ) {
     contacts = JSON.parse(localStorage.getItem('contact'));
   }
+
   return contacts;
+}
+
+
+
+$form.submit(function(e) {
+  e.preventDefault();
+
+  $newcontact = {
+    "firstname": $firstname.val(),
+    "lastname": $lastname.val(),
+    "email": $email.val(),
+    "mobile": $mobile.val(),
+    "address": $address.val()
+  }
+
+  if (!$editState) {
+    $contacts = getLocalStorage();
+    $contacts.push($newcontact);
+    localStorage.setItem('contact', JSON.stringify($contacts));
+    gerenerHTML($newcontact);
+
+  } else {
+    editContactValues($newcontact);
+  }
+  // reinitialise le form;
+  $form.trigger('reset');
+});
+
+
+
+function gerenerHTML(contact, i) {
+  $html = `
+         <ul data-contact="${i}">
+           <li class="firstname">${contact.firstname}</li>
+           <li class="lastname">${contact.lastname}</li>
+           <li class="email">${contact.email}</li>
+           <li class="mobile">${contact.mobile}</li>
+           <li class="contact">${contact.address}</li>
+           <li><button type="button" data-contact="${i}" name="supp"  class="suppcontact"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+              <button type="button" name="edit" data-edit="${i}"  class="editcontact"><i class="fas fa-edit" aria-hidden="true"></i></button>
+           </li>
+         </ul>
+       `;
+  $section.append($html);
 }
 
 function afficherToutDansHTML() {
   $contactsToArray = getLocalStorage();
-  for (let i = 0; i < $contactsToArray.length; i++) {
-    $html = `
-           <ul>
-             <li>${$contactsToArray[i].firstname}</li>
-             <li>${$contactsToArray[i].lastname}</li>
-             <li>${$contactsToArray[i].email}</li>
-             <li>${$contactsToArray[i].mobile}</li>
-             <li>${$contactsToArray[i].address}</li>
-             <li><button type="button" data-contact="${i}" name="supp"  class="suppcontact"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
-                <button type="button" name="edit" data-edit="${i}"  class="editcontact"><i class="fas fa-edit" aria-hidden="true"></i></button>
-             </li>
-           </ul>
-         `;
-    $section.append($html);
-  }
+
+  $contactsToArray.forEach(function(contact, i) {
+    gerenerHTML(contact, i);
+  });
+
 }
 
 function supprimerElement() {
@@ -81,16 +88,17 @@ function supprimerElement() {
     $contactsToArray = getLocalStorage();
     //supprimer du localStorage
     $contactsToArray.splice($index, 1);
-    //remettre le tableau dans localStorage.
+    $(this).parent().parent().remove();
     localStorage.setItem('contact', JSON.stringify($contactsToArray));
-    document.location.reload('http://localhost/developpement/javascript/js10/carnetadresse/');
+
   });
 }
 
 function editElement() {
   $editBtn = $('.editcontact');
-  $editState = true;
+
   $editBtn.on('click', function() {
+    $editState = true;
     //selectionner tache par index du tableau
     $index = $(this).attr('data-edit');
 
@@ -102,23 +110,38 @@ function editElement() {
     $email.attr('value', $contact.email);
     $mobile.attr('value', $contact.mobile);
     $address.attr('value', $contact.address);
+    $form.attr('data-contact', $index);
+
   });
 }
 
 function editContactValues($newcontact) {
      $contacts = getLocalStorage();
+     $index = $form.attr('data-contact');
      $contacts[$index] = $newcontact;
      localStorage.setItem('contact', JSON.stringify($contacts));
 
-     // reinitialise le form;
+     let allEditBtn = Array.from(document.getElementsByClassName('editcontact'));
+
+     allEditBtn.forEach(function(btn) {
+       if(btn.getAttribute('data-edit') == $index) {
+         $(btn).parent().parent().remove();
+       }
+     });
+
+     gerenerHTML($newcontact, $index);
+
+     editElement();
+     supprimerElement();
      $form.trigger('reset');
-     document.location.reload('http://localhost/developpement/javascript/js10/carnetadresse/');
+
+     $editState = false;
 }
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  addNewContact()
   afficherToutDansHTML();
+  editElement()
   supprimerElement();
-  editElement();
+  $editState = false;
 });
