@@ -14,30 +14,10 @@
   </head>
   <body>
   <!-- HEADER -->
-    <header class="banner flex-reverse">
-      <div class="flex wrap space-between container">
-        <a class="banner_logo" href="./"><img src="img/logo.png" alt="Cup Of Tea"></a>
-        <div class="panier">
-          <p class="inline-block">mon panier</p>
-          <i class="fas fa-shopping-cart inline-block" aria-hidden="true"></i>
-          <p class="inline-block"><strong>42,00€</strong></p>
-        </div>
-        <nav class="banner_nav flex space-between">
-          <a href="#" class="banner_link">Thé Noir</a>
-          <a href="#" class="banner_link">Thé Vert</a>
-          <a href="#" class="banner_link">Oolong</a>
-          <a href="#" class="banner_link">Thé Blanc</a>
-          <a href="#" class="banner_link">Rooibos</a>
-          <a href="#" class="banner_link">Notre Histoire</a>
-        </nav>
-      </div>
-      <div class="promo-sticky bg-dark-green">
-        <p>Livraison offerte à partir de 65€ d'achat !</p>
-        <img src="img/ribbon.svg" alt="Elu meilleur thé">
-      </div>
-    </header>
+    <?php include('php/header.php'); ?>
   <!-- MAIN -->
     <main class="container">
+
       <!-- MAIN HEADER PROMO -->
       <header class="promo-header">
         <h1>C'est Noël, profitez-en !</h1>
@@ -74,8 +54,10 @@
           <img src="img/tea/1.jpg" alt="thé noir">
         </article>
       </section>
+
       <!-- SECTION 2 -->
       <div class="section flex">
+
         <!-- ARTICLE 1 -->
         <article>
           <h2>Notre nouveauté</h2>
@@ -85,6 +67,7 @@
           <p>à partir de <strong class="block">8,50€</strong></p>
           <a class="btn">voir ce produit</a>
         </article>
+
         <!-- ARTICLE 2 -->
         <article>
           <h2>Notre nouveauté</h2>
@@ -94,6 +77,7 @@
           <p>à partir de <strong class="block">8,50€</strong></p>
           <a class="btn">voir ce produit</a>
         </article>
+
         <!-- ARTICLE 3-->
         <article>
           <h2>Notre nouveauté</h2>
@@ -106,48 +90,6 @@
       </div>
     </main>
   <!-- FOOTER -->
-    <footer>
-      <div class="info flex bg-dark-green">
-        <p><i class="fas fa-shopping-cart" aria-hidden="true"></i>paiement sécurité</p>
-        <p><i class="fas fa-truck" aria-hidden="true"></i>ma livraison offerte</p>
-        <p><i class="fas fa-shopping-cart" aria-hidden="true"></i>Carte de fidélité</p>
-        <p><i class="fas fa-phone" aria-hidden="true"></i>service client</p>
-        <p><i class="fas fa-check-circle" aria-hidden="true"></i>garantie qualité</p>
-      </div>
-      <div class="flex">
-        <article class="flex-column">
-          <h4>Cup of tea</h4>
-          <nav>
-            <a href="#">Notre histoire</a>
-            <a href="#">Nos boutiques</a>
-            <a href="#">Le Thé de A à Z</a>
-            <a href="#">Espace clients Pro</a>
-            <a href="#">Recrutement</a>
-            <a href="#">contactez-nous !</a>
-            <a href="#">L'Ecole du Thé</a>
-          </nav>
-        </article>
-        <article class="flex-column">
-          <h4>Commandez en ligne</h4>
-          <nav>
-            <a href="#">Première visite</a>
-            <a href="#">Aide - FAQ</a>
-            <a href="#">Service client</a>
-            <a href="#">Suivre ma commande</a>
-            <a href="#">CGV</a>
-            <a href="#">Informations Légales</a>
-          </nav>
-        </article>
-        <article class="flex-column">
-          <h4>Suivez-nous !</h4>
-          <nav>
-            <a href="#">Notre histoire</a>
-            <a href="#">Nos boutiques</a>
-            <a href="#">Le Thé de A à Z</a>
-            <a href="#">Espace clients Pro</a>
-          </nav>
-        </article>
-    </div>
-    </footer>
+    <?php include('php/footer.php'); ?>
   </body>
 </html>

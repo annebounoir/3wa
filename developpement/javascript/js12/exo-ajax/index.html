@@ -7,37 +7,37 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>Exercice Ajax</h1>
-
-    <div id="response">
-
-
-    </div>
-
-    <form action="index.html">
-      <fieldset>
-        <legend>faites votre choix</legend>
-        <p>
-          <label for="html">
-            <input type="radio" id="html" name="choix" value="html">
-            Récupérer un contenu HTML du serveur
-          </label>
-        </p>
-        <p>
-          <label for="json">
-            <input type="radio" id="json" name="choix" value="json">
-            Récupérer du contenu JSON du serveur
-          </label>
-        </p>
-        <p>
-          <label for="films">
-            <input type="radio" id="films" name="choix" value="films">
-            Récupérer des films
-          </label>
-        </p>
-      </fieldset>
-      <button type="submit" name="button">Exécuter</button>
-    </form>
+    <header>
+      <a href="./" id="logo"><h1>Ajax</h1></a>
+    </header>
+    <main>
+      <div id="response">
+      </div>
+      <form action="index.html">
+        <fieldset>
+          <legend>faites votre choix</legend>
+          <p>
+            <label for="html">
+              <input type="radio" id="html" name="choix" value="html">
+              Récupérer un contenu HTML du serveur
+            </label>
+          </p>
+          <p>
+            <label for="json">
+              <input type="radio" id="json" name="choix" value="json">
+              Récupérer du contenu JSON du serveur
+            </label>
+          </p>
+          <p>
+            <label for="films">
+              <input type="radio" id="films" name="choix" value="films">
+              Récupérer des films
+            </label>
+          </p>
+        </fieldset>
+        <button type="submit" name="button" class="btn">Exécuter</button>
+      </form>
+    </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/index.js" charset="utf-8"></script>
   </body>

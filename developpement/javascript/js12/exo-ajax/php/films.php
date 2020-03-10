@@ -11,5 +11,5 @@
     ['title' => 'Les yeux jaunes des crocodiles', 'body' => 'attention ça mord', 'image' => 'img/yeux-jaunes.jpg'],
   ];
 
-  header("Content-type: application/json; charset=utf-8");
-  echo json_encode($films);
+
+include('films.view.php');

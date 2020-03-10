@@ -1,26 +1,3 @@
-/* @font-face */
-
-@font-face {
- font-family: "Cardo";
- src: url("../fonts/cardo/cardo-regular.woff") format("woff");
- font-weight: normal;
- font-style: normal;
-}
-
-@font-face {
- font-family: "Cardo";
- src: url("../fonts/cardo/cardo-italic.woff") format("woff");
- font-weight: normal;
- font-style: italic;
-}
-
-@font-face {
- font-family: "Cardo";
- src: url("../fonts/cardo/cardo-bold.woff") format("woff");
- font-weight: bold;
- font-style: bold;
-}
-
 
 /* style par défaut ********************************************/
 
@@ -37,10 +14,14 @@ body {
   font-family: Verdana, Helvetica, sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
+  color: #f2f2f2;
+  background-color: black;
+  text-align: center;
 }
 
 a {
   text-decoration: none;
+  color: #f2f2f2;
 }
 
 a:hover,
@@ -49,48 +30,79 @@ a:active {
 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-style: normal;
   font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 img {
   max-width: 100%;
+  height: auto;
   vertical-align: top;
 }
 
-figure {
-  margin: 0;
-}
+/* STRUCTURE ********/
 
-
-/* HEADER ****************************************************/
-
-.banner {
-
-}
-
-/* MAIN *******************************************************/
-
+header,
 main {
-
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-/* FOOTER *****************************************************/
+form {
+  max-width: 40%;
+  margin: 5rem auto;
+  background-color: #030303;
+  padding: 2rem;
+}
 
-.mention {
-  font-size: 1.2rem;
+fieldset {
+  border: 0;
+}
+
+legend {
+  display: block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+article {
+  flex : 0 1 auto;
+  width: 26%;
+  align-content: center;
+  background-color: #020202;
+  margin: 2%;
+  padding: 3rem 5rem;
+}
+
+
+section {
+  border-top: 1px solid #f2f2f2;
 }
 
 /* CLASS ********************************************************/
 
-.container {
-  margin-left: 10%;
-  margin-right: 10%;
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .btn {
   display: inline-block;
+  border: 0;
+  background: purple;
+  padding: 0 2rem;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
 /* @media query ***************************************************/

@@ -4,32 +4,38 @@ document.querySelector('form').addEventListener('submit', function(e) {
 
 
   $form = $('form').serializeArray();
+  $value = $form[0].value;
 
   let url = 'php/htmlcontent.php';
 
-  if ($form[0].value == 'json') {
+  if ($value == 'json') {
     url = 'php/json.php';
-    // result = json
   }
 
-  if($form[0].value == 'films') {
+  if($value == 'films') {
     url = 'php/films.php';
-    // result = blabla;
   }
 
   $.ajax({
     type: 'GET',
     url: url,
     success: function(data) {
-      document.getElementById('response').innerHTML = data;
+      cadependedecequonvafaire($value, data);
     }
   });
-
 });
 
-function JSONtoHTML() {
-  $jsonlist =
-  `<p> ${data.prenom} </p>
-  <p> ${data.nom} </p>
-  <p> ${data.email} </p>`
+
+function cadependedecequonvafaire(value, data) {
+
+  if (value == 'json') {
+    $jsonlist =
+    `<p> ${data.prenom} </p>
+    <p> ${data.nom} </p>
+    <p> ${data.email} </p>
+    <p> ${data.adresse} </p>`;
+    return document.getElementById('response').innerHTML = $jsonlist;
+  }
+
+  return document.getElementById('response').innerHTML = data;
 }
