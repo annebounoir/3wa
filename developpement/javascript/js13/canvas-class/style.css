@@ -1,0 +1,71 @@
+body {
+  background-color: #8A0808;
+  text-align: center;
+}
+
+main {
+  margin: 0 auto;
+}
+
+canvas {
+  
+  background-color: white;
+  border: 20px ridge gold;
+}
+
+
+/*
+// Chef-d'oeuvre collectif
+// Contexte
+//
+// Le musée du Louvre célèbre lors de sa prochaine exposition le 100ème anniversaire de la naissance d'***Aristide Carré***, inventeur du courant cubiste avec Picasso et du concept de rond en peinture.
+//
+// Pour lui rendre hommage, le musée souhaite présenter au public une borne interactive sur laquelle chaque visiteur pourra cliquer avec son doigt sur un écran tactile. Chaque clic dessinera à l'endroit du clic un rond de taille et de couleur aléatoires. Ainsi l'ensemble des visiteurs du musée participeront à cette oeuvre collective.
+//
+// Nous avons gagné l'appel d'offres public et devons réaliser un premier prototype à présenter au musée pour... demain.
+//
+//
+// Choix techniques
+//
+// Nous développerons cette borne interactive avec Javascript et Canvas.
+//
+//     La zone de dessin du canvas aura une taille de 800 pixels de large pour 600 pixels de haut.
+//     Une bordure autour du canvas permettra de simuler le cadre du tableau. Cette bordure sera de couleur or, fera 20 pixels d'épaisseur et aura une apparence "3D".
+//     Un fond rouge élégant tapissera le fond de la page ( code couleur #8A0808 )
+//
+//
+// Conseils
+// Découper le travail en plusieurs étapes
+//
+// Lorsque vous vous attaquez au développement d'une application, il est important de procéder par petites étapes successives. Dans le cas présent, il va falloir par exemple résoudre les problématiques suivantes :
+//
+//     Générer une couleur CSS aléatoire
+//     Récupérer la position exacte de la souris lors d'un clic
+//     Dessiner des ronds
+//
+// Il est en général avisé de commencer par le plus simple et d'aller vers le plus complexe. On peut ainsi commencer par dessiner un rond de taille et de couleur fixe à un endroit précis. Puis dessiner un rond à l'endroit du clic de souris, puis gérer la couleur et la taille de façon aléatoire, etc.
+// Organiser son code
+//
+// Organisez au maximum votre code :
+//
+//     créez des fonctions
+//     répartissez-le de manière pertinente dans plusieurs fichiers
+//     commentez-le
+//
+// Réutiliser le travail déjà fait
+//
+// Peut-être certaines fonctions utilitaires déjà développées auparavant pourront nous être utiles ici.
+//
+//
+// Bonus
+//
+// Vous pouvez varier les plaisirs en remplaçant les ronds par :
+//
+//     des carrés
+//     des têtes de Mickey
+//     des smileys
+//     une photo de votre acteur.trice préféré.e
+
+
+
+*/
