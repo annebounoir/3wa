@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>canvas</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="body">
+
+    <header>
+      <a href="./"><h1>Ardoise Magique</h1></a>
+    </header>
+
+    <main>
+      <canvas id="canvas"></canvas>
+
+      <div  id="toolbar">
+        <button type="button" name="button" id="clearBtn">Effacer</button>
+        <div class="pencilSizes">
+          <h2>Pencil Size</h2>
+          <button type="button" name="button" data-size="2">XS</button>
+          <button type="button" name="button" data-size="4">S</button>
+          <button type="button" name="button" data-size="6">M</button>
+          <button type="button" name="button" data-size="8">L</button>
+          <button type="button" name="button" data-size="10">XL</button>
+          <button type="button" name="button" data-size="12">XXL</button>
+        </div>
+        <div class="pencilColors">
+          <h2>Pencil Color</h2>
+          <button type="button" name="button" class="white" data-color="white">white</button>
+          <button type="button" name="button" class="red" data-color="red">red</button>
+          <button type="button" name="button" class="blue" data-color="blue">blue</button>
+          <button type="button" name="button" class="green" data-color="green">green</button>
+          <button type="button" name="button" class="pink" data-color="pink">pink</button>
+          <button type="button" name="button" class="purple" data-color="purple">purple</button>
+          <input type="color" name="" id="chromaCircle" value="">
+        </div>
+      </div>
+
+    </main>
+
+    <script src="canvas.js" charset="utf-8"></script>
+    <script src="toolbar.js" charset="utf-8"></script>
+  </body>
+</html>
