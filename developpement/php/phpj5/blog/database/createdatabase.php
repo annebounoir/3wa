@@ -16,12 +16,14 @@ try {
     $create_posts = $pdo->prepare($create_table_posts);
     $create_comments = $pdo->prepare($create_table_comments);
     $create_user = $pdo->prepare($create_user);
+    $create_user_password = $pdo->prepare($create_user_password);
 
     $create_users->execute();
     $create_category->execute();
     $create_posts->execute();
     $create_comments->execute();
     $create_user->execute();
+    $create_user_password->execute();
 
     echo 'database, tables and user created';
 } catch (PDOException $e) {

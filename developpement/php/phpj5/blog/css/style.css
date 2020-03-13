@@ -1,95 +1,106 @@
+/* @font-face */
+
+@font-face {
+ font-family: "Cardo";
+ src: url("../fonts/cardo/cardo-regular.woff") format("woff");
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: "Cardo";
+ src: url("../fonts/cardo/cardo-italic.woff") format("woff");
+ font-weight: normal;
+ font-style: italic;
+}
+
+@font-face {
+ font-family: "Cardo";
+ src: url("../fonts/cardo/cardo-bold.woff") format("woff");
+ font-weight: bold;
+ font-style: bold;
+}
+
+
+/* style par défaut ********************************************/
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%;
-  margin: 0;
-  padding: 0;
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* soit 1 rem = 10px */
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  font-family: Verdana, Helvetica, sans-serif;
   font-size: 1.6rem;
-  line-height: 1.2;
-  letter-spacing: 0.1rem;
-  font-family: verdana, sans-serif;
-  background-color: #000916;
-background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.828 12h-3.656z' fill='%23151418' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
-}
-
-main {
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-header {
-  padding: 2rem 10%;
-  margin-bottom: 4rem;
-  margin-top: 0;
-  text-align: center;
-  background-color: rgba(0, 9, 22, 0.8);
-}
-
-h1 {
-  display: block;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-style: normal;
-  font-family: 'Abril Fatface' , times, serif;
-  font-size: 6.5rem;
-  letter-spacing: 2rem;
-  color: #000916;
-  text-shadow: 1px 0 0 #a77601, -1px 0 0 #a77601, 0 1px 0 #a77601, 0 -1px 0 #a77601, 1px 1px #a77601, -1px -1px 0 #a77601, 1px -1px 0 #a77601, -1px 1px 0 #a77601;
-  border-bottom: solid 1px #a77601;
-  border-top: solid 1px #a77601;
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
-table {
-  padding: 1rem;
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 5rem;
+a:hover,
+a:focus,
+a:active {
+
 }
 
-td {
-  padding: 1rem;
-  border: solid 1px #a77601;
-}
-
-tr:nth-child(even) {
-  background-color: rgba(0, 9, 22, 0.5);
-}
-
-tr:nth-child(odd) {
-  background-color: rgba(167, 118, 1, 0.1);
-}
-
-th {
+h1, h2, h3, h4, h5, h6 {
+  font-style: normal;
   font-weight: normal;
-  background-color: #a77601;
-  border: solid 1px #a77601;
-  padding: 2rem 1rem;
-  color: #000916;
 }
 
-.secondary {
-  text-align: left;
-  width: 15%;
-  background-color: #000916;
-  color: #a77601;
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+figure {
+  margin: 0;
+}
+
+
+/* HEADER ****************************************************/
+
+.banner {
+
+}
+
+/* MAIN *******************************************************/
+
+main {
+
+}
+
+/* FOOTER *****************************************************/
+
+.mention {
+  font-size: 1.2rem;
+}
+
+/* CLASS ********************************************************/
+
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .btn {
-  color : #a77601;
-  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* @media query ***************************************************/
+
+/*tablette*/
+@media screen and (min-width : 768px) {
+
+}
+
+/*desktop*/
+@media screen and (min-width : 1024px) {
+
 }

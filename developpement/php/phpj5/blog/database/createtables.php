@@ -29,7 +29,7 @@ $create_table_posts = '
         author_id INT(11) NOT NULL,
         category_id INT(11) NOT NULL,
         CONSTRAINT fk_author_id FOREIGN KEY (author_id) REFERENCES users (id),
-        CONSTRAINT fk_category_id FOREIGN KEY (category_id) REFERENCES users (id)
+        CONSTRAINT fk_category_id FOREIGN KEY (category_id) REFERENCES category (id)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ';
 
@@ -49,4 +49,8 @@ $create_table_comments = '
 
 $create_user = '
     INSERT INTO users (name, email, is_author, is_admin) VALUES (\'admin\', \'admin@example.com\', true, true);
+';
+
+$create_user_password = '
+  ALTER TABLE users ADD password CHAR(255) NOT NULL;
 ';
